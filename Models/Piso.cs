@@ -8,6 +8,9 @@
         public int Area2 { get; set; }
         public int Piso1 { get; set; }
         public int Piso2 { get; set; }
-       
+        public int CalculoArea { get; set; }
+        public int CalculoPiso { get; set; }
+
+
     }
 }
