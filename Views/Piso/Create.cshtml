@@ -5,22 +5,22 @@
 </div>
 <br />
 
-<form>
-            <div class="text-center">
+<form asp-controller="Piso" asp-action="Create" method="post">
+            <div class="form-group text-center">
                 <span class="text-center">Local da instalação</span><br />
-                <input type="text" class="form-control" asp-for="Local" id="local" placeholder="Local">
+                <input type="text" class="text-center" asp-for="Local" id="local" placeholder="Local">
             </div><br />
 
-            <div class="text-center">
+            <div class="form-group text-center">
                  <span class="text-center">Medidas da área em metros</span><br />
-                <input type="number" class="form-control" asp-for="Area1" id="medida1" placeholder="Medida da área 1">
-                <input type="number" class="form-control" asp-for="Area2" id="medida2" placeholder="Medida da área 2">
+                <input type="number" class="text-center" asp-for="Area1" id="medida1" placeholder="Medida da área 1">
+                <input type="number" class="text-center" asp-for="Area2" id="medida2" placeholder="Medida da área 2">
             </div><br />
 
-            <div class="text-center">
+            <div class="form-group text-center">
                 <span class="text-center">Medidas do piso em metros</span><br />
-                <input type="number" class="form-control"  asp-for="Piso1" id="medidaPiso1" placeholder="Medida do piso 1">
-                <input type="number" class="form-control"  asp-for="Piso2" id="medidaPiso2" placeholder="Medida do piso 2">
+                <input type="number" class="text-center" asp-for="Piso1" id="medidaPiso1" placeholder="Medida do piso 1">
+                <input type="number" class="text-center" asp-for="Piso2" id="medidaPiso2" placeholder="Medida do piso 2">
             </div><br />
 
             <div class="text-center" role="group" aria-label="Basic outlined example">

@@ -59,7 +59,7 @@ namespace CalculadoraOnlineDePiso.Controllers
                 pisoExistente.Area1 = piso.Area1;
                 pisoExistente.Area2 = piso.Area2;
                 pisoExistente.Piso1 = piso.Piso1;
-                pisoExistente.Piso1 = piso.Piso1;
+                pisoExistente.Piso2 = piso.Piso2;
 
                 return RedirectToAction("Index");
             }
