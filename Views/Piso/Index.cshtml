@@ -1,0 +1,41 @@
+﻿@model List<Piso>
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Listagem das áreas calculadas</h1>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a role="button" class="btn btn-outline-success" asp-controller="Piso" asp-action="Create">Adicionar novo</a>
+    </div>
+    <br />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Local</th>
+                    <th scope="col">Área 1</th>
+                    <th scope="col">Área 2</th>
+                    <th scope="col">Piso 1</th>
+                    <th scope="col">Piso 2</th>
+                    <th scope="col">Ação</th>
+                </tr>
+
+                @foreach (var piso in Model)
+                {
+                    <tr>
+                        <td>@piso.Id</td>
+                        <td>@piso.Local</td>
+                        <td>@piso.Area1</td>
+                        <td>@piso.Area2</td>
+                        <td>@piso.Piso1</td>
+                        <td>@piso.Piso2</td>
+                   
+                    <td><a role="button" class="btn btn-outline-danger" asp-route-id="@piso.Id" asp-controller="Piso" asp-action="Delete">Excluir</a></td>
+                    </tr>
+                }
+       
+        </table>
+</div></>
+
+
