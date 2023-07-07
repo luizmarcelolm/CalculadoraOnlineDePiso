@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Globalization;
 using System.Reflection;
 using CalculadoraOnlineDePiso.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -25,8 +26,10 @@ namespace CalculadoraOnlineDePiso.Controllers
             if (ModelState.IsValid)
             {
                 piso.CalculoArea = (piso.Area1 * piso.Area2);
-                piso.CalculoPiso = piso.CalculoArea/((piso.Piso1 / 100) * (piso.Piso2 / 100));
-               
+                piso.CalculoPiso = (piso.CalculoArea / ((piso.Piso1 / 100) * (piso.Piso2 / 100)));
+                piso.CalculoPiso = (piso.CalculoPiso + ((piso.CalculoPiso * 10) / 100));
+                piso.CalculoPiso = (float)Math.Round(piso.CalculoPiso);
+
 
                 piso.Id = pisos.Count + 1;
                 pisos.Add(piso);
@@ -66,7 +69,9 @@ namespace CalculadoraOnlineDePiso.Controllers
                 pisoExistente.Piso1 = piso.Piso1;
                 pisoExistente.Piso2 = piso.Piso2;
                 pisoExistente.CalculoArea = (pisoExistente.Area1 * pisoExistente.Area2);
-                pisoExistente.CalculoPiso = pisoExistente.CalculoArea / (pisoExistente.Piso1 * pisoExistente.Piso2);
+                pisoExistente.CalculoPiso = (pisoExistente.CalculoArea / ((pisoExistente.Piso1 / 100) * (pisoExistente.Piso2 / 100)));
+                pisoExistente.CalculoPiso = (pisoExistente.CalculoPiso + ((pisoExistente.CalculoPiso * 10) / 100));
+                pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso);
 
                 return RedirectToAction("Index");
                
