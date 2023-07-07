@@ -3,7 +3,7 @@
 
 <div class="text-center">
 
-    <h1 class="display-4">Editar contato</h1>
+    <h1 class="display-4">Editar medidas</h1>
 
 </div>
 
@@ -11,33 +11,28 @@
 
     <input type ="hidden" asp-for="Id" />
 
-    <div class="form-group">
-        <label for="Local">Local</label>
-        <input type="text" asp-for="Local" class="form-control" placeholder="Local da instalação">    
-    </div>
+    <div class="form-group text-center">
+        <label for="Local">Local</label><br />
+        <input type="text" asp-for="Local" class="text-center">    
+    </div><br />
 
-     <div class="form-group">
-     <label for="Area1">Área 1</label>
-        <input type="number" asp-for="Area1" class="form-control" placeholder="Medida área 1">
-    </div>
+    <div class="form-group text-center">
+        <label for="Áreas">Medida da área em metros</label><br />
+        <input type="number" asp-for="Area1" class="text-center">
+        <input type="number" asp-for="Area2" class="text-center">
+    </div><br />
 
-    <div class="form-group">
-        <label for="Area2">Área 2</label>
-        <input type="number" asp-for="Area2" class="form-control" placeholder="Medida área 2">
-    </div>
+    
 
-    <div class="form-group">
-        <label for="Piso1">Piso 1</label>
-        <input type="number" asp-for="Piso1" class="form-control" placeholder="Medida piso 1">
+    <div class="form-group text-center">
+        <label for="Piso">Medida do piso em metros</label><br />
+        <input type="number" asp-for="Piso1" class="text-center">
+        <input type="number" asp-for="Piso2" class="text-center">
     </div>
-
-    <div class="form-group">
-        <label for="Piso2">Piso 2</label>
-        <input type="number" asp-for="Piso2" class="form-control" placeholder="Medida piso 2">
-    </div>
-
     <br />
 
+    <div class="form-group text-center">
     <button type="submit" class="btn btn-outline-success">Alterar</button>
     <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button">Voltar</a>
+    </div>
 </form>

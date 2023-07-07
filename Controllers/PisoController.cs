@@ -24,7 +24,7 @@ namespace CalculadoraOnlineDePiso.Controllers
             if (ModelState.IsValid)
             {
                 piso.CalculoArea = (piso.Area1 * piso.Area2);
-                piso.CalculoPiso = (piso.Piso1 * piso.Piso2);
+                piso.CalculoPiso = piso.CalculoArea/(piso.Piso1 * piso.Piso2);
 
                 piso.Id = pisos.Count + 1;
                 pisos.Add(piso);
@@ -63,8 +63,11 @@ namespace CalculadoraOnlineDePiso.Controllers
                 pisoExistente.Area2 = piso.Area2;
                 pisoExistente.Piso1 = piso.Piso1;
                 pisoExistente.Piso2 = piso.Piso2;
+                pisoExistente.CalculoArea = (pisoExistente.Area1 * pisoExistente.Area2);
+                pisoExistente.CalculoPiso = pisoExistente.CalculoArea / (pisoExistente.Piso1 * pisoExistente.Piso2);
 
                 return RedirectToAction("Index");
+               
             }
 
             return View(piso);
