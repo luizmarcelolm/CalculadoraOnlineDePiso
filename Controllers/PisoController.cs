@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Drawing;
+using System.Reflection;
 using CalculadoraOnlineDePiso.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +25,8 @@ namespace CalculadoraOnlineDePiso.Controllers
             if (ModelState.IsValid)
             {
                 piso.CalculoArea = (piso.Area1 * piso.Area2);
-                piso.CalculoPiso = piso.CalculoArea/(piso.Piso1 * piso.Piso2);
+                piso.CalculoPiso = piso.CalculoArea/((piso.Piso1 / 100) * (piso.Piso2 / 100));
+               
 
                 piso.Id = pisos.Count + 1;
                 pisos.Add(piso);
