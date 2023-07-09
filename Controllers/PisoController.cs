@@ -48,11 +48,6 @@ namespace CalculadoraOnlineDePiso.Controllers
             return View(produto);
         }
 
-        private ActionResult HttpNotFound()
-        {
-            return View(Index);
-        }
-
         [HttpPost]
         public ActionResult Edit(Piso piso)
         {
@@ -90,6 +85,48 @@ namespace CalculadoraOnlineDePiso.Controllers
             pisos.Remove(piso);
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Look(int id)
+        {
+            var produto = pisos.FirstOrDefault(p => p.Id == id);
+
+            if (produto == null)
+                return HttpNotFound();
+
+            return View(produto);
+        }
+
+        [HttpPost]
+        public ActionResult Look(Piso piso)
+        {
+            if (ModelState.IsValid)
+            {
+                var pisoExistente = pisos.FirstOrDefault(p => p.Id == piso.Id);
+
+                if (pisoExistente == null)
+                    return HttpNotFound();
+
+                pisoExistente.Local = piso.Local;
+                pisoExistente.Area1 = piso.Area1;
+                pisoExistente.Area2 = piso.Area2;
+                pisoExistente.Piso1 = piso.Piso1;
+                pisoExistente.Piso2 = piso.Piso2;
+                pisoExistente.CalculoArea = (pisoExistente.Area1 * pisoExistente.Area2);
+                pisoExistente.CalculoPiso = (pisoExistente.CalculoArea / ((pisoExistente.Piso1 / 100) * (pisoExistente.Piso2 / 100)));
+                pisoExistente.CalculoPiso = (pisoExistente.CalculoPiso + ((pisoExistente.CalculoPiso * 10) / 100));
+                pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso);
+
+                return RedirectToAction("Index");
+
+            }
+
+            return View(piso);
+        }
+
+        private ActionResult HttpNotFound()
+        {
+            return View(Index);
         }
     }
 
