@@ -3,16 +3,34 @@ html {
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+#box2 {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#box1 {
+    width: 200px;
+    height: 32px;
+    border-radius: 10px;   
+}
+
+#box {
+    width: 100px;
+    height: 32px;
+    border-radius: 10px;
 }

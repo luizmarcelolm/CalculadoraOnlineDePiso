@@ -13,26 +13,23 @@
 
     <div class="form-group text-center">
         <label for="Local">Local</label><br />
-        <input type="text" asp-for="Local" class="text-center">    
-    </div><br />
+        <input type="text" asp-for="Local" class="text-center" id="box1" required>
+    </div>
 
     <div class="form-group text-center">
         <label for="Áreas">Medida da área em metros</label><br />
-        <input type="number" asp-for="Area1" class="text-center">
-        <input type="number" asp-for="Area2" class="text-center">
-    </div><br />
-
-    
+        <input type="number" asp-for="Area1" class="text-center" id="box" required>
+        <input type="number" asp-for="Area2" class="text-center" id="box" required>
+    </div>    
 
     <div class="form-group text-center">
         <label for="Piso">Medida do piso em metros</label><br />
-        <input type="number" asp-for="Piso1" class="text-center">
-        <input type="number" asp-for="Piso2" class="text-center">
+        <input type="number" asp-for="Piso1" class="text-center" id="box" required>
+        <input type="number" asp-for="Piso2" class="text-center" id="box" required>
     </div>
-    <br />
 
     <div class="form-group text-center">
-    <button type="submit" class="btn btn-outline-success">Alterar</button>
-    <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button">Voltar</a>
+        <button type="submit" class="btn btn-outline-success" id="box2">Alterar</button><br /><br />
+        <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button" id="box2">Voltar</a>
     </div>
 </form>
