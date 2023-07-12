@@ -29,6 +29,19 @@
     </div>
 
     <div class="form-group text-center">
+        <span class="text-center">Acrescentar mais 10% ?</span><br />
+        <div class="form-check form-group text-center">
+            <input class="text-center" asp-for="Opcao" type="radio" value="SIM">
+            <label class="form-check-label" for="flexRadioDefault1">Sim</label>
+        </div>
+
+        <div class="form-check form-group text-center">
+            <input class="text-center" type="radio" asp-for="Opcao" value="NÃO">
+            <label class="form-check-label" for="flexRadioDefault2">Não</label>
+        </div>
+    </div>
+
+    <div class="form-group text-center">
         <button type="submit" class="btn btn-outline-success" id="box2">Alterar</button><br /><br />
         <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button" id="box2">Voltar</a>
     </div>

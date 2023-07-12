@@ -26,11 +26,11 @@ namespace CalculadoraOnlineDePiso.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (piso.Opcao == "n")
+                if (piso.Opcao == "NÃO")
                 {
-                    piso.CalculoArea = (piso.Area1 * piso.Area2);
+                    piso.CalculoArea = piso.Area1 * piso.Area2;
                     piso.CalculoArea = (float)Math.Round(piso.CalculoArea, 2);
-                    piso.CalculoAreaPiso = (piso.Piso1 * piso.Piso2) / 100;
+                    piso.CalculoAreaPiso = (piso.Piso1 * piso.Piso2) / 10000;
                     piso.CalculoAreaPiso = (float)Math.Round(piso.CalculoAreaPiso, 2);
                     piso.CalculoPiso = piso.CalculoArea / piso.CalculoAreaPiso;
                     piso.CalculoPiso = (float)Math.Round(piso.CalculoPiso);
@@ -40,16 +40,16 @@ namespace CalculadoraOnlineDePiso.Controllers
                     return RedirectToAction("Index");
                 }
 
-                else
+                else if (piso.Opcao == "SIM")
                 {
-                    piso.CalculoArea = (piso.Area1 * piso.Area2);
+                    piso.CalculoArea = piso.Area1 * piso.Area2;
                     piso.CalculoArea = (float)Math.Round(piso.CalculoArea, 2);
-                    piso.CalculoAreaPiso = ((piso.Piso1 * piso.Piso2) / 100);
-                    piso.CalculoAreaPiso = (float)Math.Round(piso.CalculoAreaPiso, 2);
+                    piso.CalculoAreaPiso = (piso.Piso1 * piso.Piso2) / 10000;
+                    piso.CalculoAreaPiso = (float)Math.Round(piso.CalculoAreaPiso, 2);            
                     piso.CalculoPiso = piso.CalculoArea / piso.CalculoAreaPiso;
-                    piso.CalculoPiso = piso.CalculoPiso + ((piso.CalculoAreaPiso * 10) / 100);
+                    piso.CalculoPiso = piso.CalculoPiso + (piso.CalculoPiso * 10 / 100);
                     piso.CalculoPiso = (float)Math.Round(piso.CalculoPiso);
-                    piso.CalculoQuant = (float)Math.Round(piso.CalculoArea / piso.CalculoPiso);
+
 
                     piso.Id = pisos.Count + 1;
                     pisos.Add(piso);
@@ -82,21 +82,45 @@ namespace CalculadoraOnlineDePiso.Controllers
                 if (pisoExistente == null)
                     return HttpNotFound();
 
-                pisoExistente.Local = piso.Local;
-                pisoExistente.Area1 = piso.Area1;
-                pisoExistente.Area2 = piso.Area2;
-                pisoExistente.Piso1 = piso.Piso1;
-                pisoExistente.Piso2 = piso.Piso2;
-                pisoExistente.CalculoArea = (pisoExistente.Area1 * pisoExistente.Area2);
-                pisoExistente.CalculoArea = (float)Math.Round(pisoExistente.CalculoArea, 2);
-                pisoExistente.CalculoAreaPiso = (pisoExistente.Piso1 / 100) * (pisoExistente.Piso2 / 100);
-                pisoExistente.CalculoAreaPiso = (float)Math.Round(pisoExistente.CalculoAreaPiso, 2);
-                // pisoExistente.CalculoPiso = (pisoExistente.CalculoPiso + ((pisoExistente.CalculoPiso * 10) / 100));
-                pisoExistente.CalculoPiso = pisoExistente.CalculoArea / pisoExistente.CalculoAreaPiso;
-                pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso);
+                if(piso.Opcao == "NÃO")
+                {
+                    pisoExistente.Opcao = piso.Opcao;
+                    pisoExistente.Opcao = "NÃO";
+                    pisoExistente.Local = piso.Local;
+                    pisoExistente.Area1 = piso.Area1;
+                    pisoExistente.Area2 = piso.Area2;
+                    pisoExistente.Piso1 = piso.Piso1;
+                    pisoExistente.Piso2 = piso.Piso2;
+                    pisoExistente.CalculoArea = (pisoExistente.Area1 * pisoExistente.Area2);
+                    pisoExistente.CalculoArea = (float)Math.Round(pisoExistente.CalculoArea, 2);
+                    pisoExistente.CalculoAreaPiso = (pisoExistente.Piso1 * pisoExistente.Piso2) / 10000;
+                    pisoExistente.CalculoAreaPiso = (float)Math.Round(pisoExistente.CalculoAreaPiso, 2);
+                    pisoExistente.CalculoPiso = pisoExistente.CalculoArea / pisoExistente.CalculoAreaPiso;
+                    pisoExistente.CalculoPiso = pisoExistente.CalculoPiso;
+                    pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso, 0);
 
-                return RedirectToAction("Index");
-               
+                    return RedirectToAction("Index");
+
+                }else if(piso.Opcao == "SIM")
+                {
+                    pisoExistente.Opcao = piso.Opcao;
+                    pisoExistente.Opcao = "SIM";
+                    pisoExistente.Local = piso.Local;
+                    pisoExistente.Area1 = piso.Area1;
+                    pisoExistente.Area2 = piso.Area2;
+                    pisoExistente.Piso1 = piso.Piso1;
+                    pisoExistente.Piso2 = piso.Piso2;
+                    pisoExistente.CalculoArea = (pisoExistente.Area1 * pisoExistente.Area2);
+                    pisoExistente.CalculoArea = (float)Math.Round(pisoExistente.CalculoArea, 2);
+                    pisoExistente.CalculoAreaPiso = (pisoExistente.Piso1 * pisoExistente.Piso2) / 10000;
+                    pisoExistente.CalculoAreaPiso = (float)Math.Round(pisoExistente.CalculoAreaPiso, 2);
+                    pisoExistente.CalculoPiso = pisoExistente.CalculoArea / pisoExistente.CalculoAreaPiso;
+                    pisoExistente.CalculoPiso = pisoExistente.CalculoPiso + (pisoExistente.CalculoPiso * 10 / 100);
+                    pisoExistente.CalculoPiso = pisoExistente.CalculoPiso;
+                    pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso, 0);
+                    return RedirectToAction("Index");
+                }
+          
             }
 
             return View(piso);

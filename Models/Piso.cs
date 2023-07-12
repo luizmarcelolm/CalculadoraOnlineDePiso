@@ -11,7 +11,6 @@
         public float CalculoArea { get; set; }
         public float CalculoPiso { get; set; }
         public float CalculoAreaPiso { get; set; }
-        public float CalculoQuant { get; set; }
         public string Opcao { get; set; }
 
     }
