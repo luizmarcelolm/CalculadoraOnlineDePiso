@@ -13,16 +13,29 @@
 
             <div class="form-group text-center">
                  <span class="text-center">Medidas da área em metros</span><br />
-                <input type="number" class="text-center" asp-for="Area1" id="box" placeholder="Medida 1" required>
-                <input type="number" class="text-center" asp-for="Area2" id="box" placeholder="Medida 2" required>
+                <input type="double" class="text-center" asp-for="Area1" id="box" placeholder="Medida 1" required>
+                <input type="double" class="text-center" asp-for="Area2" id="box" placeholder="Medida 2" required>
             </div>
 
             <div class="form-group text-center">
                 <span class="text-center">Medidas do piso em centímetros</span><br />
                 <span class="text-center">Ex. 0,60mts = 60cm</span><br />
-                <input type="number" class="text-center" asp-for="Piso1" id="box" placeholder="Medida 1" required>
-                <input type="number" class="text-center" asp-for="Piso2" id="box" placeholder="Medida 2" required>
+                <input type="double" class="text-center" asp-for="Piso1" id="box" placeholder="Medida 1" required>
+                <input type="double" class="text-center" asp-for="Piso2" id="box" placeholder="Medida 2" required>
             </div>
+
+            <div class="form-group text-center">
+                <span class="text-center">Acrescentar mais 10% ?</span><br />
+                <div class="form-check form-group text-center">
+                <input class="text-center" asp-for="Opcao" type="radio" value="s"checked>
+                    <label class="form-check-label" for="flexRadioDefault1">Sim</label>           
+                </div>
+
+                <div class="form-check form-group text-center">
+                    <input class="text-center" type="radio" asp-for="Opcao" value="n">
+                    <label class="form-check-label" for="flexRadioDefault2">Não</label>
+                </div>
+             </div>
 
             <div class="text-center" role="group" aria-label="Basic outlined example">
                 <button type="submit" role="button" class="btn btn-outline-success" id="box2">Adicionar</button><br /><br />

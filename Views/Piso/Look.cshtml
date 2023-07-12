@@ -11,9 +11,10 @@
     
 
     <div class="form-group text-center">
-            <div>@Html.DisplayFor(piso => piso.Local)</div>
-            <div>Medida da área ( @Html.DisplayFor(piso => piso.Area1) mts x @Html.DisplayFor(piso => piso.Area2) mts ) =  @Html.DisplayFor(piso => piso.CalculoArea) metros²</div>
-            <div>Medida do piso ( @Html.DisplayFor(piso => piso.Piso1) cm x @Html.DisplayFor(piso => piso.Piso2) cm ) =  @Html.DisplayFor(piso => piso.CalculoPiso) peças</div>
+            <div>Local da instalação ( @Html.DisplayFor(piso => piso.Local) )</div>
+            <div>Área do local ( @Html.DisplayFor(piso => piso.Area1) mts x @Html.DisplayFor(piso => piso.Area2) mts ) =  @Html.DisplayFor(piso => piso.CalculoArea) mts²</div>
+            <div>Área do piso ( @Html.DisplayFor(piso => piso.Piso1) cm x @Html.DisplayFor(piso => piso.Piso2) cm ) =  @Html.DisplayFor(piso => piso.CalculoAreaPiso) mts²</div>
+            <div>Quantidade de pisos = @Html.DisplayFor(piso => piso.CalculoPiso) peças</div>
     </div><br />
 
         <div class="form-group text-center">
