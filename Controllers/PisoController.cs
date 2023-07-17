@@ -2,14 +2,17 @@
 using System.Globalization;
 using System.Reflection;
 using CalculadoraOnlineDePiso.Models;
+using Microsoft.AspNetCore.Components.RenderTree;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using IronPdf;
 
 namespace CalculadoraOnlineDePiso.Controllers
 {
     public class PisoController : Controller
     {
         private static List<Piso> pisos = new List<Piso>(); // Lista para armazenar os produtos
+        private int id;
 
         public ActionResult Index()
         {
@@ -45,7 +48,7 @@ namespace CalculadoraOnlineDePiso.Controllers
                     piso.CalculoArea = piso.Area1 * piso.Area2;
                     piso.CalculoArea = (float)Math.Round(piso.CalculoArea, 2);
                     piso.CalculoAreaPiso = (piso.Piso1 * piso.Piso2) / 10000;
-                    piso.CalculoAreaPiso = (float)Math.Round(piso.CalculoAreaPiso, 2);            
+                    piso.CalculoAreaPiso = (float)Math.Round(piso.CalculoAreaPiso, 2);
                     piso.CalculoPiso = piso.CalculoArea / piso.CalculoAreaPiso;
                     piso.CalculoPiso = piso.CalculoPiso + (piso.CalculoPiso * 10 / 100);
                     piso.CalculoPiso = (float)Math.Round(piso.CalculoPiso);
@@ -58,8 +61,8 @@ namespace CalculadoraOnlineDePiso.Controllers
 
 
             }
-                return View(piso);
-            
+            return View(piso);
+
 
         }
         public ActionResult Edit(int id)
@@ -82,7 +85,7 @@ namespace CalculadoraOnlineDePiso.Controllers
                 if (pisoExistente == null)
                     return HttpNotFound();
 
-                if(piso.Opcao == "NÃO")
+                if (piso.Opcao == "NÃO")
                 {
                     pisoExistente.Opcao = piso.Opcao;
                     pisoExistente.Opcao = "NÃO";
@@ -101,7 +104,7 @@ namespace CalculadoraOnlineDePiso.Controllers
 
                     return RedirectToAction("Index");
 
-                }else if(piso.Opcao == "SIM")
+                } else if (piso.Opcao == "SIM")
                 {
                     pisoExistente.Opcao = piso.Opcao;
                     pisoExistente.Opcao = "SIM";
@@ -120,7 +123,7 @@ namespace CalculadoraOnlineDePiso.Controllers
                     pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso, 0);
                     return RedirectToAction("Index");
                 }
-          
+
             }
 
             return View(piso);
@@ -184,7 +187,27 @@ namespace CalculadoraOnlineDePiso.Controllers
             return View(Index);
         }
 
+      
 
+        public FileResult PaginaPDF(Piso piso)
+        {
+            var produto = pisos.FirstOrDefault(p => p.Id == id);
+
+            // Instantiate Renderer
+            var renderer = new ChromePdfRenderer();
+
+            // Create a PDF from a URL or local file path   
+            var pdf = renderer.RenderUrlAsPdf("https://localhost:7091/Piso/Look/" + piso.Id);
+          
+            // Export to a file or Stream
+            pdf.SaveAs("output.pdf");
+
+            return File(pdf.BinaryData, "application/pdf;");
+
+
+        }
+
+       
     }
 
 }
