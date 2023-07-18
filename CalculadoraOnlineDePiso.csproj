@@ -8,11 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="IronPdf" Version="2023.7.4" />
-    <PackageReference Include="IronPdf.Classic" Version="2021.12.4401" />
-    <PackageReference Include="IronPdf.MacOs" Version="2023.7.4" />
-    <PackageReference Include="IronPdf.Native.Chrome.Windows" Version="2023.7.15762" />
-    <PackageReference Include="IronPdf.Slim" Version="2023.7.4" />
-    <PackageReference Include="PDF.Core" Version="2020.12.2" />
   </ItemGroup>
 
 </Project>

@@ -171,7 +171,6 @@ namespace CalculadoraOnlineDePiso.Controllers
                 pisoExistente.CalculoPiso = (float)Math.Round(pisoExistente.CalculoPiso);
 
                 return RedirectToAction("Index");
-
             }
 
             return View(piso);
@@ -187,27 +186,16 @@ namespace CalculadoraOnlineDePiso.Controllers
             return View(Index);
         }
 
-      
-
         public FileResult PaginaPDF(Piso piso)
         {
+            
             var produto = pisos.FirstOrDefault(p => p.Id == id);
-
-            // Instantiate Renderer
-            var renderer = new ChromePdfRenderer();
-
-            // Create a PDF from a URL or local file path   
-            var pdf = renderer.RenderUrlAsPdf("https://localhost:7091/Piso/Look/" + piso.Id);
-          
-            // Export to a file or Stream
+ 
+            var renderer = new ChromePdfRenderer();           
+            var pdf = renderer.RenderUrlAsPdf("https://localhost:7091/Piso/Look/" + piso.Id);      
             pdf.SaveAs("output.pdf");
-
             return File(pdf.BinaryData, "application/pdf;");
-
-
-        }
-
-       
+        }      
     }
 
 }

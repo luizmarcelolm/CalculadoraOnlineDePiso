@@ -2,8 +2,7 @@
 {
     public class Piso
     {
-        internal string id;
-
+        
         public int Id { get; set; }
         public string Local { get; set; }
         public float Area1 { get; set; }
