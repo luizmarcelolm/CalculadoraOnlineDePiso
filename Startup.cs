@@ -14,12 +14,14 @@ namespace CalculadoraOnlineDePiso
 
         public void ConfigurationServices(IServiceCollection services)
         {
+           
             // Add services to the container.        
             services.AddControllersWithViews();     
         }
 
-        public void Configure(WebApplication app, IWebHostEnvironment development)
+        public void Configure(WebApplication app, IWebHostEnvironment environment)
         {
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
