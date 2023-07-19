@@ -18,7 +18,7 @@ namespace CalculadoraOnlineDePiso
             services.AddControllersWithViews();     
         }
 
-        public void Configure(WebApplication app, IWebHostEnvironment environment)
+        public void Configure(WebApplication app, IWebHostEnvironment development)
         {
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
