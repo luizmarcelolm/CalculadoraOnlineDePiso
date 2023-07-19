@@ -192,7 +192,7 @@ namespace CalculadoraOnlineDePiso.Controllers
             var produto = pisos.FirstOrDefault(p => p.Id == id);
  
             var renderer = new ChromePdfRenderer();           
-            var pdf = renderer.RenderUrlAsPdf("https://localhost:7091/Piso/Look/" + piso.Id);      
+            var pdf = renderer.RenderUrlAsPdf("https://calculadoraonlinedepiso.azurewebsites.net/Piso/Look/" + piso.Id);      
             pdf.SaveAs("output.pdf");
             return File(pdf.BinaryData, "application/pdf;");
         }      
