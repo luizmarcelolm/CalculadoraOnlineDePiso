@@ -1,7 +1,7 @@
 ﻿@model Piso
 
 <div class="text-center">
-    <h1 class="display-4">Criar cálculo 1</h1>
+    <h1 class="display-4">Criar cálculo 3</h1>
 </div>
 <br />
    
@@ -13,15 +13,15 @@
 
             <div class="form-group text-center">
                  <span class="text-center">Medidas da área em metros</span><br />
-                <input type="float" pattern="[0-1000,]+[0-99]" class="text-center" asp-for="Area1" id="box" placeholder="Medida 1" required>
-                <input type="float" pattern="[0-1000,]+[0-99]" class="text-center" asp-for="Area2" id="box" placeholder="Medida 2" required>
+                 <input type="float" pattern="(?:\.|,|[0-9])*" class="text-center" asp-for="Area1" id="box" placeholder="Medida 1" required>
+                 <input type="float" pattern="(?:\.|,|[0-9])*" class="text-center" asp-for="Area2" id="box" placeholder="Medida 2" required>
             </div>
 
             <div class="form-group text-center">
                 <span class="text-center">Medidas do piso em centímetros</span><br />
                 <span class="text-center">Ex. 0,60mts = 60cm</span><br />
-                <input type="float" pattern="[0-9]+([,][0-9]+)?" class="text-center" asp-for="Piso1" id="box" placeholder="Medida 1" required>
-                <input type="float" pattern="[0-9]+([,][0-9]+)?" class="text-center" asp-for="Piso2" id="box" placeholder="Medida 2" required>
+                <input type="float" pattern="(?:\.|,|[0-9])*" class="text-center" asp-for="Piso1" id="box" placeholder="Medida 1" required>
+               <input type="float" pattern="(?:\.|,|[0-9])*" class="text-center" asp-for="Piso2" id="box" placeholder="Medida 2" required>
             </div>
 
             <div class="form-group text-center">
