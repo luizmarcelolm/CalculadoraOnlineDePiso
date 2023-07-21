@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 
 namespace CalculadoraOnlineDePiso
 {
@@ -21,6 +23,14 @@ namespace CalculadoraOnlineDePiso
 
         public void Configure(WebApplication app, IWebHostEnvironment environment)
         {
+            // Definindo a cultura padrão: pt-BR
+            var supportedCultures = new[] { new CultureInfo("pt-BR") };
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(culture: "pt-BR", uiCulture: "pt-BR"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
