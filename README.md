@@ -44,6 +44,19 @@
 <h3>É possível fazer o acesso em celulares e tablets também.👇</h3>
 ![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/7f6d4d20-ed6b-41b3-ae65-99c00cd5db43)
 
+<h1>Desafios que encontrei no código.</h1>
+<h3>Quando fiz os testes para fazer o cálculo da metragem no visual studio 2022 funcionou perfeitamente, porém após fazer o deploy utilizando azure não gerava os dados corretos, no input quando inseria um número quebrado como 0,9 o cálculo éra feito somente como número 9. Isso é devido a utilização de , ou . dependendo da região, como utilizo azure da microsoft o sistema não entendia a , e foi necessário adicionar esse código na classe startup para funcionar. 👇</h3>
+![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/298952ba-3218-40f9-9d07-095c49da633a)
+
+<h3>Para gerar o pdf do item correto precisei concatenar o link da página + o ID do item correspondente. 👇</h3>
+![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/327b9163-7550-4957-957b-5e6f7219bf8f)
+
+
+
+
+
+
+
 
 
 
