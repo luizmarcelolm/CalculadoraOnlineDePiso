@@ -24,13 +24,13 @@
 ![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/f926261b-a8f3-4f18-8b25-38ca9982108d)
 
 <h3>Após o envio dos cálculos é criado um item na página inicial com as informações digitadas, e botões de verificar as medidas, criar pdf, editar e excluir. 👇</h3>
-![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/edcdfebf-2784-48a3-87ff-63a26c235964)
 
 <h3>Ao clicar em verificar medidas, você irá visualizar as informações digitadas como local e o cálculo da metragem, quantidade de piso com a opção de adição de 10% sim ou não. 👇</h3>
 ![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/908b7933-ccb4-447c-9688-30892c5fcbfb)
 
 <h3>No icone do pdf gera um arquivo para você salvar caso precise. 👇</h3>
-![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/4191d8ed-581d-4880-a408-08995de9a752)
+<img src=”https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/4191d8ed-581d-4880-a408-08995de9a752”>
+
 
 <h3>No icone de editar você é direcionado para uma página onde as informações digitadas anteriormente aparecem nos campos e podem ser alteradas conforme a necessidade, ao final do formulário é só clicar em alterar e será feita a alteração. 👇</h3>
 ![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/457c0555-54e2-4be9-85b9-0e608bbe7a5f)
