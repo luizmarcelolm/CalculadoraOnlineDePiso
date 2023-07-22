@@ -38,6 +38,10 @@
 <h3>E o icone da lixeira exclui o item. 👇</h3>
 ![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/2d17deec-a9f6-433f-a9eb-42c2d51a7f58)
 
+<h3>No menu principal tem um item de como fazer os cálculos, ai clicar nele vc será direcionado a página com a explicação dos cálculos. 👇</h3>
+![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/9d8b4d93-3804-44fc-9c38-bc2fb6a7eb4b)
+
+
 
 
 
