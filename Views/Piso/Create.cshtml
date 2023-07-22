@@ -1,11 +1,11 @@
 ﻿@model Piso
 
-<div class="text-center">
-    <h1 class="display-4">Criar Novo</h1>
+<div id="index" class="text-center">
+    <h1 class="display-4">CRIAR</h1>
 </div>
 <br />
    
-<form asp-controller="Piso" asp-action="Create" method="post">
+<form asp-controller="Piso" id="index" asp-action="Create" method="post">
             <div class="form-group text-center">
               <span class="text-center">Local da instalação</span><br />
               <input type="text" class="text-center" asp-for="Local" id="box1" placeholder="Local" required>

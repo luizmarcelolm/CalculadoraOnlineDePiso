@@ -12,8 +12,8 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-image: url(/fundo1.jpg);
-    background-position-x:center;
+    background-image:url(/fundo1.jpg);
+    background-position-x: center;
 }
 
 #box2 {
@@ -25,19 +25,22 @@ body {
 #box1 {
     width: 200px;
     height: 32px;
-    border-radius: 10px;   
+    border-radius: 10px;
+    opacity: 0.6;
 }
 
 #box {
     width: 100px;
     height: 32px;
     border-radius: 10px;
+    opacity: 0.6;
 }
 
 footer {
     position: fixed;
-    bottom:0;
- }
+    bottom: 0;
+    opacity: 0.4;
+}
 
 table {
     border-radius:25px;
@@ -49,8 +52,8 @@ look {
     background: rgba(240, 248, 255, 0.6);
 }
 
-#information{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#information {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #index {
@@ -59,6 +62,27 @@ look {
 
 #paginaInicial {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:brown;
+    font-weight: bold;
+    color: brown;
+    margin-top: 35%;
+}
+
+header {
+    font-weight: bold;
+    opacity: 0.8;
+    color: brown;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    opacity: 0.5;
+    color: brown;
+}
+
+#verificar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size:16px;
 }
 
