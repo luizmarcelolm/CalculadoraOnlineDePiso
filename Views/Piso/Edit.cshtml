@@ -1,46 +1,47 @@
 ﻿@model Piso
 
 
-<div class="text-center">
-    <h1 class="display-4">Editar medidas</h1>
+<div id="index" class="text-center">
+    <h1 class="display-4">ALTERAR</h1>
+
+
+    <form asp-controller="Piso" asp-action="Edit" method="post" id="index">
+
+        <input type ="hidden" asp-for="Id" />
+
+        <div class="form-group text-center">
+            <label for="Local">Local</label><br />
+            <input type="text" asp-for="Local" class="text-center" id="box1" required>
+        </div>
+
+        <div class="form-group text-center">
+            <label for="Áreas">Medida da área em metros</label><br />
+            <input type="float" asp-for="Area1" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" id="box" required>
+            <input type="float" asp-for="Area2" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" id="box" required>
+        </div>    
+
+        <div class="form-group text-center">
+            <label for="Piso">Medida do piso em metros</label><br />
+            <input type="float" asp-for="Piso1" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" id="box" required>
+            <input type="float" asp-for="Piso2" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" id="box" required>
+        </div>
+
+        <div class="form-group text-center">
+            <span class="text-center">Acrescentar mais 10% ?</span><br />
+            <div class="form-check form-group text-center">
+                <input class="text-center" asp-for="Opcao" type="radio" value="SIM">
+                <label class="form-check-label" for="flexRadioDefault1">Sim</label>
+            </div>
+
+            <div class="form-check form-group text-center">
+                <input class="text-center" type="radio" asp-for="Opcao" value="NÃO">
+                <label class="form-check-label" for="flexRadioDefault2">Não</label>
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-outline-success" id="box2">ALTERAR</button><br /><br />
+            <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button" id="box2">VOLTAR</a>
+        </div>
+    </form>
 </div>
-
-<form asp-controller="Piso" asp-action="Edit" method="post" >
-
-    <input type ="hidden" asp-for="Id" />
-
-    <div class="form-group text-center">
-        <label for="Local">Local</label><br />
-        <input type="text" asp-for="Local" class="text-center" id="box1" required>
-    </div>
-
-    <div class="form-group text-center">
-        <label for="Áreas">Medida da área em metros</label><br />
-        <input type="float" asp-for="Area1" pattern="[0-9]+([,][0-9]+)?" class="text-center" id="box" required>
-        <input type="float" asp-for="Area2" pattern="[0-9]+([,][0-9]+)?" class="text-center" id="box" required>
-    </div>    
-
-    <div class="form-group text-center">
-        <label for="Piso">Medida do piso em metros</label><br />
-        <input type="float" asp-for="Piso1" pattern="[0-9]+([,][0-9]+)?" class="text-center" id="box" required>
-        <input type="float" asp-for="Piso2" pattern="[0-9]+([,][0-9]+)?" class="text-center" id="box" required>
-    </div>
-
-    <div class="form-group text-center">
-        <span class="text-center">Acrescentar mais 10% ?</span><br />
-        <div class="form-check form-group text-center">
-            <input class="text-center" asp-for="Opcao" type="radio" value="SIM">
-            <label class="form-check-label" for="flexRadioDefault1">Sim</label>
-        </div>
-
-        <div class="form-check form-group text-center">
-            <input class="text-center" type="radio" asp-for="Opcao" value="NÃO">
-            <label class="form-check-label" for="flexRadioDefault2">Não</label>
-        </div>
-    </div>
-
-    <div class="form-group text-center">
-        <button type="submit" class="btn btn-outline-success" id="box2">Alterar</button><br /><br />
-        <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button" id="box2">Voltar</a>
-    </div>
-</form>

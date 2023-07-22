@@ -1,28 +1,27 @@
 ﻿@model List<Piso>
 
-<div class="text-center">
-    <h1 class="display-4">Áreas calculadas</h1>
+<div  id="index" class="text-center">
+    <h1 class="display-4">Calcular área</h1>
     <div class="text-center">
-        <a role="button" class="btn btn-outline-success" asp-controller="Piso" asp-action="Create" id="box2">Adicionar novo</a>
+        <a role="button" class="btn btn-outline-success" asp-controller="Piso" asp-action="Create" id="box2">ADICIONAR NOVO</a>
 
     </div>
     <br />
 
-        <table class="table">
+    <table class="table table-hover table-borderless">
             <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Local</th>       
-                    <th scope="col">Área</th>
-                    <th scope="col">Quant.</th>
+                <tr>                
+                    <th scope="col">LOCAL</th>       
+                    <th scope="col">ÁREA</th>
+                    <th scope="col">QUANT.</th>
                     <th scope="col">+10%</th>  
-                    <th scope="col">Ação</th>
+                    <th scope="col">AÇÃO</th>
                 </tr>
+            </thead>
 
                 @foreach (var piso in Model)
                 {
-                    <tr>
-                        <td>@piso.Id</td>
+                    <tr>                     
                         <td>@piso.Local</td>        
                         <td>@piso.CalculoArea mts²</td>
                         <td>@piso.CalculoPiso peças</td>

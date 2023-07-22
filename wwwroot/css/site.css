@@ -12,6 +12,8 @@ html {
 
 body {
     margin-bottom: 60px;
+    background-image: url(/fundo1.jpg);
+    background-position-x:center;
 }
 
 #box2 {
@@ -36,3 +38,27 @@ footer {
     position: fixed;
     bottom:0;
  }
+
+table {
+    border-radius:25px;
+    background: rgba(240, 248, 255, 0.6);
+}
+
+look {
+    border-radius: 25px;
+    background: rgba(240, 248, 255, 0.6);
+}
+
+#information{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#index {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#paginaInicial {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:brown;
+}
+
