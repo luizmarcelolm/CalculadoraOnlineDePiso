@@ -41,6 +41,9 @@
 <h3>No menu principal tem um item de como fazer os cálculos, ai clicar nele vc será direcionado a página com a explicação dos cálculos. 👇</h3>
 ![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/9d8b4d93-3804-44fc-9c38-bc2fb6a7eb4b)
 
+<h3>É possível fazer o acesso em celulares e tablets também.👇</h3>
+![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/7f6d4d20-ed6b-41b3-ae65-99c00cd5db43)
+
 
 
 
