@@ -30,7 +30,7 @@
  <img src="https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/blob/master/wwwroot/Imagens%20readme/5.png" /> 
  
 <h3>No icone do pdf gera um arquivo para você salvar caso precise. 👇</h3>
-<img src=”https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/blob/master/wwwroot/Imagens%20readme/6.png”>
+<img src=”https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/blob/master/wwwroot/Imagens%20readme/6.png” />
 
 
 <h3>No icone de editar você é direcionado para uma página onde as informações digitadas anteriormente aparecem nos campos e podem ser alteradas conforme a necessidade, ao final do formulário é só clicar em alterar e será feita a alteração. 👇</h3>
