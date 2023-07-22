@@ -1,7 +1,8 @@
 <h1>Calculadora online de piso</h1>
 
 <h2>>Status: Completo 🔗 https://calculadoraonlinedepiso.azurewebsites.net/</h2
-<div>>![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/b6155716-ead2-4094-b36b-866fdc5adbe9)</div
+
+![image](https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/assets/109484017/66198122-8849-4a56-98e5-936269b262af)
 
 
 <h2>O que utilizei:</h2>
