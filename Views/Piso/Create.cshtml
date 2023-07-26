@@ -2,43 +2,44 @@
 
 <div id="index" class="text-center">
     <h1 class="display-4">CRIAR</h1>
-</div>
-<br />
+
+    <br />
    
-<form asp-controller="Piso" id="index" asp-action="Create" method="post">
-            <div class="form-group text-center">
-              <span class="text-center">Local da instalação</span><br />
-              <input type="text" class="text-center" asp-for="Local" id="box1" placeholder="Local" required>
-            </div>
-
-            <div class="form-group text-center">
-                 <span class="text-center">Medidas da área em metros</span><br />
-                 <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Area1" id="box" placeholder="Medida 1" required>
-                 <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Area2" id="box" placeholder="Medida 2" required>
-            </div>
-
-            <div class="form-group text-center">
-                <span class="text-center">Medidas do piso em centímetros</span><br />
-                <span class="text-center">Ex. 0,60mts = 60cm</span><br />
-                <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Piso1" id="box" placeholder="Medida 1" required>
-                <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Piso2" id="box" placeholder="Medida 2" required>
-            </div>
-
-            <div class="form-group text-center">
-                <span class="text-center">Acrescentar mais 10% ?</span><br />
-                <div class="form-check form-group text-center">
-                <input class="text-center" asp-for="Opcao" type="radio" value="SIM"checked>
-                    <label class="form-check-label" for="flexRadioDefault1">Sim</label>           
+    <form asp-controller="Piso" asp-action="Create" method="post">
+                <div class="form-group text-center">
+                  <span class="text-center">Local da instalação</span><br />
+                  <input type="text" class="text-center" asp-for="Local" id="box1" placeholder="Local" required>
                 </div>
 
-                <div class="form-check form-group text-center">
-                    <input class="text-center" type="radio" asp-for="Opcao" value="NÃO">
-                    <label class="form-check-label" for="flexRadioDefault2">Não</label>
+                <div class="form-group text-center">
+                     <span class="text-center">Medidas da área em metros</span><br />
+                     <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Area1" id="box" placeholder="Medida 1" required>
+                     <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Area2" id="box" placeholder="Medida 2" required>
                 </div>
-             </div>
 
-            <div class="text-center" role="group" aria-label="Basic outlined example">
-                <button type="submit" role="button" class="btn btn-outline-success" id="box2">ADICIOANAR</button><br /><br />
-        <a role="button" class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" id="box2">VOLTAR</a>
-            </div>
-</form>
+                <div class="form-group text-center">
+                    <span class="text-center">Medidas do piso em centímetros</span><br />
+                    <span class="text-center">Ex. 0,60mts = 60cm</span><br />
+                    <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Piso1" id="box" placeholder="Medida 1" required>
+                    <input type="float" pattern="[0-9]+([,]+[0-9]+)?" class="text-center" asp-for="Piso2" id="box" placeholder="Medida 2" required>
+                </div>
+
+                <div class="form-group text-center">
+                    <span class="text-center">Acrescentar mais 10% ?</span><br />
+                    <div class="form-check form-group text-center">
+                    <input class="text-center" asp-for="Opcao" type="radio" value="SIM"checked>
+                        <label class="form-check-label" for="flexRadioDefault1">Sim</label>           
+                    </div>
+
+                    <div class="form-check form-group text-center">
+                        <input class="text-center" type="radio" asp-for="Opcao" value="NÃO">
+                        <label class="form-check-label" for="flexRadioDefault2">Não</label>
+                    </div>
+                 </div>
+
+                <div class="text-center" role="group" aria-label="Basic outlined example">
+                    <button type="submit" role="button" class="btn btn-outline-success" id="box2">ADICIOANAR</button><br /><br />
+            <a role="button" class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" id="box2">VOLTAR</a>
+                </div><br />
+    </form>
+</div>

@@ -1,9 +1,9 @@
 ﻿@model Piso
 
 
-<div class="text-center">
+<div id="index" class="text-center">
     <h1 class="display-4">VERIFICAR</h1>
-</div><br />
+    <br />
 
     <div id="verificar" class="form-group text-center">
         <div>Local da instalação ( @Html.DisplayFor(piso => piso.Local) )</div>
@@ -14,11 +14,11 @@
     </div>
     <br />
 
-    <div id="index" class="form-group text-center">
+    <div class="form-group text-center">
         <a class="btn btn-outline-primary" asp-controller="Piso" asp-action="Index" role="button">VOLTAR</a>
-    </div>
+    </div><br />
 
-   
+</div>
         
 
    
