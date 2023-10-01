@@ -1,6 +1,6 @@
 <h1>Calculadora online de piso</h1>
 
-<h2>Link da aplicação 🔗 https://calculadoraonlinedepiso.azurewebsites.net/</h2>
+
 
  <img src="https://github.com/luizmarcelolm/CalculadoraOnlineDePiso/blob/master/wwwroot/Imagens%20readme/1.png" /> 
 
